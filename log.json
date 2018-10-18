@@ -1,0 +1,66 @@
+{
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "description",
+      "type": "text"
+    },
+    {
+      "name": "email",
+      "type": "string"
+    },
+    {
+      "name": "telephone",
+      "type": "string"
+    },
+    {
+      "name": "category_id",
+      "type": "integer#unsigned"
+    },
+    {
+      "name": "user_id",
+      "type": "integer#unsigned"
+    }
+  ],
+  "foreign_keys": [
+    {
+      "column": "user_id",
+      "references": "id",
+      "on": "users"
+    },
+    {
+      "column": "category_id",
+      "references": "id",
+      "on": "categories"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "user",
+      "type": "belongsTo",
+      "class": "App\\User"
+    },
+    {
+      "name": "category",
+      "type": "belongsTo",
+      "class": "App\\Category"
+    }
+  ],
+  "validations": [
+    {
+      "field": "name",
+      "rules": "required|max:100"
+    },
+    {
+      "field": "description",
+      "rules": "required"
+    },
+    {
+      "field": "phone",
+      "rules": "required"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "fields": [
+    {
+      "name": "category_name",
+      "type": "string"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "logs",
+      "type": "hasMany",
+      "class": "App\\Log"
+    }
+  ],
+  "validations": [
+    {
+      "field": "category_name",
+      "rules": "required|max:100"
+    }
+  ]
+}
