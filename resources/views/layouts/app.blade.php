@@ -51,10 +51,10 @@
                             </li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link " href="log">Log Issue</a>
+                                <a class="nav-link " href="{{url('/log')}}">Log Issue</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="category">Issue Category</a>
+                                <a class="nav-link" href="{{url('/category')}}">Issue Category</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
